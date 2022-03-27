@@ -90,8 +90,8 @@ import urllib.request
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 import cv2
-import numpy as np
-import matplotlib.pyplot as plt
+# import numpy as np
+# import matplotlib.pyplot as plt
 import pandas as pd
 
 from flask import Flask
@@ -208,11 +208,11 @@ def upload_video():
 			# print(frame)
 			x = "Shape for frame ", text1," shape is ",frame.shape
 
-			def display(frame):
-				return plt.imshow(frame)
-			y=display(frame)
-			print(y)
-			plt.imshow(frame)
+# 			def display(frame):
+# 				return plt.imshow(frame)
+# 			y=display(frame)
+# 			print(y)
+# 			plt.imshow(frame)
 			bb =  "Pixels at particular frames"
 			# import base64
 			# from io import BytesIO
