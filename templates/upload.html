@@ -1,0 +1,91 @@
+<!-- <html>
+<head>
+<title>Python Flask Upload multiple images and display multiple images uploaded</title>
+</head>
+<body>
+<div style="padding:20px;">
+<h2>Python Flask Upload multiple images and display multiple images uploaded</h2>
+<p>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+</p>
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+        <p>
+            <input type="file" name="files[]" multiple="true" autocomplete="off" required>
+        </p>
+    </dl>
+    <p>
+        <input type="submit" value="Submit">
+    </p>
+</form>
+ 
+{% if filenames %}
+    {% for filename in filenames %}
+        <div style="padding:20px;float:left;">
+            <img width="500" src="{{ url_for('display_image', filename=filename) }}"> 
+        </div>
+    {% endfor %}
+{% endif %}
+</div>
+</body>
+</html> -->
+
+
+<!doctype html>
+<title>Python Flask - Video Upload and Play Example</title>
+<h2>Select a video to upload and play</h2>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+{% if filename %}
+	<div class="video-container" style="margin: 10px auto;">
+		<video width="50%" height="50%" autoplay="autoplay" controls="controls" preload="preload">
+			<source src="{{ url_for('display_video', filename=filename) }}" type="video/mp4"></source>
+		</video>
+	</div>
+  
+
+
+{% endif %}
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required><br><br>
+      <label for="">Enter frame : </label>
+      <input type="number" id="text" name="text"><br>
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Upload">
+	</p>
+</form>
+
+
+{{x}} <br><br>
+{{frame1}} <br><br>
+{{y}} <br><br>
+
+<br><br>
+{{z}}<br><br>
+{{bb}} <br>
+{{ thislist |safe}}<br><br>
+{{d}}<br><br>
+
+
+{{html}}
